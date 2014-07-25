@@ -9,12 +9,12 @@
 
     <% @entities.each do |entity| %>
     <tr>
-      <td><%= entities.name %></td>
-      <td><%= entities.description %></td>
-      <td><%= entities.twitter %></td>
+      <td><%= entity.name %></td>
+      <td><%= entity.description %></td>
+      <td><%= entity.twitter %></td>
     </tr>
     <% end %>
 </table>
 
     <br>
-    <%= link_to "entity", new_entity_path %>    
+    <%= link_to "entity", new_entity_path %>

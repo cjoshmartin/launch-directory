@@ -1,20 +1,13 @@
-<h1>Twitter</h1>
+<h1>Members</h1>
 
-<table>
-    <tr>
-        <th>name</th>
-        <th> Bio</th>
-        <th> Twitter handle</th>
-    </tr>
 
     <% @entities.each do |entity| %>
-    <tr>
-      <td><%= entity.name %></td>
-      <td><%= entity.description %></td>
-      <td><%= entity.twitter %></td>
-    </tr>
+    <div class= "container">
+      <div class="name"><%= entity.name %></div>
+      <div class="description"><%= entity.description %></div>
+      <div class="twitter"><a href="https://twitter.com/<%= entity.twitter %>"><%= entity.twitter %></a></div>
+    </div>
     <% end %>
-</table>
 
     <br>
     <%= link_to "entity", new_entity_path %>
